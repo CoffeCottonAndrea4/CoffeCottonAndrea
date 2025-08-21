@@ -263,56 +263,10 @@
         <small> · Gmail.coffecottoncafeteria@gmail.com</small>
     </footer>
 
-    <!-- Música -->
-    <audio id="music" loop>
-        <!-- Puedes usar un archivo local: <source src="musica.mp3" type="audio/mp3"> -->
-        <source src="https://www.bensound.com/bensound-music/bensound-jazzyfrenchy.mp3" type="audio/mp3">
-    </audio>
-
-    <script>
-        // Música
-        const btnMusic = document.getElementById('btnMusic');
-        const audio = document.getElementById('music');
-        let playing = false;
-        btnMusic.addEventListener('click', () => {
-            if (!playing) { audio.play(); btnMusic.textContent = '⏸'; }
-            else { audio.pause(); btnMusic.textContent = '🎵'; }
-            playing = !playing;
-        });
-
-        // Modo nocturno
-        const btnDark = document.getElementById('btnDark');
-        btnDark.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-            btnDark.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-        });
-
-
-        const btnModo = document.getElementById('btnModo');
-        let modoOscuro = false;
-
-        btnModo.addEventListener('click', () => {
-            document.body.classList.toggle('oscuro');
-            modoOscuro = !modoOscuro;
-            btnModo.innerHTML = modoOscuro
-                ? '<i class="fa-solid fa-sun"></i>'
-                : '<i class="fa-solid fa-moon"></i>';
-        });
-
-        // Carrito (contador simple)
-        const cartCount = document.getElementById('cartCount');
-        let count = 0;
-        document.querySelectorAll('.btn-add').forEach(btn => {
-            btn.addEventListener('click', () => {
-                count++;
-                cartCount.textContent = count;
-                btn.textContent = '¡Agregado!';
-                setTimeout(() => btn.textContent = 'Agregar al carrito', 900);
-            });
-        });
-    </script>
+   
 </body>
 
 </html>
 </body>
+
 </html>
